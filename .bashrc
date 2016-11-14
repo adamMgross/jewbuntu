@@ -1,3 +1,21 @@
+# ADAM GROSS's BASH FUNCTIONS and aliases --------------------------------------
+
+alias gs='git status'
+alias gad='git add .'
+alias gc='git commit -m"Automated commit message.'
+alias gp='git push origin master'
+alias gf='git fetch'
+
+function c {
+    builtin cd "$@" && ls -F
+    }
+
+function jcat {
+ cat "$1" | python -mjson.tool 
+}
+
+# ------------------------------------------------------------------
+
 # If not running interactively, don't do anything!
 [[ $- != *i* ]] && return
 
@@ -18,6 +36,9 @@ case ${TERM} in
 		PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033_%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
 		;;
 esac
+
+
+
 
 # fortune is a simple program that displays a pseudorandom message
 # from a database of quotations at logon and/or logout.
