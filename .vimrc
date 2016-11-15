@@ -52,6 +52,8 @@ set secure
 set backspace=2
 set backspace=indent,eol,start  " Manually enable backspsace, since PyMode sometimes conflicts
 
+let g:pymode_rope = 0
+
 augroup vimrc_autocmds
     autocmd!
     " highlight characters past column 120
