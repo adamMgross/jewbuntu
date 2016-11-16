@@ -6,3 +6,5 @@ code-golf-grader/
 .ipython/*
 .ropeproject/
 .cache/
+gitbox/
+
