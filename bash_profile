@@ -25,24 +25,13 @@ function ls {
     /bin/ls -GFha "$@"
 }
 
-function bb-single-test {
-    brazil-build single-test -DtestClass="$@"
-}
 
-function test-integ {
-    brazil-build test-integration-assert -Djunit.forkmode=perTest -Djunit.threads="$@"
-}
 
 function cdn() {
   cd $(printf "%0.s../" $(seq 1 $1 ));
 }
 
-function vmscp() {
-  scp $1 amgross@dev-dsk-amgross-2a-6efd50df.us-west-2.amazon.com:/home/amgross/$2
-}
 
-function vmscpr() {
-  scp -r $1 amgross@dev-dsk-amgross-2a-6efd50df.us-west-2.amazon.com:/home/amgross/$2
 }
 
 function git-multipush() {
